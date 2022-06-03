@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>uyishi-4</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div>
+      <!--==== The film catalog will be a film course ====-->
+      <h1 class="text-center my-5">Movies catalog</h1>
+      
+      <div class="row">
+        <div class="col-4 px-4">
+          <form action="https://echo.htmlacademy.ru/courses" method="POST">
+            <input type="text" class="form-control py-2" aria-label="ave" placeholder="ave">
+            <input type="text" class="form-control my-3 py-2" aria-label="number" placeholder="5">
+            <select class="form-select py-2" aria-label="Default select example">
+              <option selected>All</option>
+              <option value="Less">Less</option>
+              <option value="Ptially">Partially</option>
+            </select>
+            <div>
+              <input 
+              class="form-control py-2 my-3"
+              list="country"
+              placeholder="Rating"
+              >
+              <datalist id="country" class="py-2">
+                <option value="high"></option>
+                <option value="to"></option>
+                <option value="low"></option>        
+              </datalist>
+            </div>
+            
+            <button class="btn btn-primary bg-gradient text-white w-100 fw-bold py-2" type="button" >Search</button>
+          </form>
+          
+          <h2 class="mt-3 mb-2">Bookmarked movies</h2>
+          
+          <ul class="p-0">
+            <li class="list-group-item rounded-top">
+              <p class="bg-wite mb-2">Avengers: Infinity War</p>
+              <button class="btn btn-danger text-white border-0 rounded-1 py-1" type="button">Remove</button>
+            </li>
+            <li class="list-group-item">
+              <p class="bg-wite mb-2">The Avengers</p>
+              <button class="btn btn-danger text-white border-0 rounded-1 py-1">Remove</button>
+            </li>
+            <li class="list-group-item rounded-bottom">
+              <p class="bg-wite mb-2">12 Years a Slave</p>
+              <button class="btn btn-danger text-white border-0 rounded-1 py-1">Remove</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-8">
+          <!--==== Search results are displayed ====-->
+          <strong class="fs-5">Search results: 39</strong>
+          <p class="alert alert-success">Use the form on the left to search for a movie</p>
+          
+          <div class="row"> 
+            <div class="col-6">
+              <!--==== single movie descriptions ====-->
+              <div class="card">
+                
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/infinity-war.jpg" class="d-block w-100" alt="There is a picture of the war of infinity" height="200">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/capitan_America.jpg" class="d-block w-100" alt="There is a picture of Captain America" height="200">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/green-man.jpg" class="d-block w-100" alt="There is a picture of a green man" height="200">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                
+                <h3 class="fs-4 mx-3 mt-4">Avengers: Infinity War</h3>
+                <div class="d-flex mx-3 mb-3">
+                  <img src="./images/calendar-silhouette.png" alt="calendar-silhouette" width="25" height="25">
+                  <p class="mx-2 card-text">2018</p>
+                </div>
+                
+                <div class="d-flex mx-3">
+                  <img src="./images/star.png" alt="star" width="20" height="20">
+                  <p class="mx-2 card-text">8.7</p>
+                </div>
+                
+                <div class="text-center mt-4 mb-3">
+                  <button class="btn btn-outline-primary">Watch trailer</button>
+                  
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    More info
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Movies</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Banner insists that Thanos is the most formidable enemy they have ever faced, revealing that he was Loki's sponsor during the Battle of New York and will wipe out half the universe if he completes the Infinity Gauntlet. Stark suggests simply destroying the Time Stone since they've got it on hand, but Strange refuses as he and Wong have pledged to protect it with their lives. Banner asks where Vision is, and Stark admits that he's lost track of him and that Steve Rogers might know where he is. Stark brings Banner up to date with everything that happened since he left Earth; the Avengers have disbanded, and he is no longer on speaking terms with Rogers. Banner implores Stark to call Rogers, insisting that whatever happened between them doesn't matter compared to what is coming. Convinced, Stark takes out the phone Rogers sent him after the Avengers Civil War and prepares to make the call.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button class="btn btn-outline-secondary">Bookmark</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-6">
+              <!--==== single movie descriptions ====-->
+              <div class="card">
+                
+                <div id="carouselExampleIndicatorsc" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsc" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicatorsc" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./images/avengers.jpg" class="d-block w-100" alt="avengers-images" height="200">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/Captain-America.jpg" class="d-block w-100" alt="Captain-America-images" height="200">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/spider_man_three.jpg" class="d-block w-100" alt="spider_man_three-imaages" height="200">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsc" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsc" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                
+                <h3 class="fs-4 mt-4">Avengers: Infinity War</h3>
+                <div class="d-flex mb-3">        
+                  <img src="./images/calendar-silhouette.png" alt="calendar-silhouette-images" width="25" height="25">
+                  <p class="mx-2 card-text">2018</p>
+                </div>
+                
+                <div class="d-flex">
+                  <img src="./images/star.png" alt="star" width="20" height="20">
+                  <p class="mx-2 card-text">8.7</p>
+                </div>
+                
+                <div class="text-center mt-4 mb-3">
+                  <button class="btn btn-outline-primary">Watch trailer</button>
+                  
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    More info
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Movies</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Did anyone notice, at 1:46 thanos's gauntlet has only 2 stones, space and the power one. But actually during the movie it had every other stone except the mind one. So marvel has things edited and manifested with such excellence that it doesn't want it's audience to know about the movie in the trailer itself. And maybe that's the reason why it's the most followed and loved one. Marvel</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button class="btn btn-outline-secondary">Bookmark</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <ul class="mt-3 justify-content-center pagination pagination-lg">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./bootstrap/bootstrap.min.js"></script>
+  </body>
+  </html>
